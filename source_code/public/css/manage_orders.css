@@ -1,0 +1,200 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #ff4500, #000);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    height: 680px;
+    background: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    background: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.header h1 {
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* عناصر التحكم */
+.toolbar {
+    background: #333;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 70px;
+} 
+.actions .main-button {
+    background-color: #ff4500; /* اللون الأساسي */
+    color: white;
+    border: none;
+    border-radius: 25px; /* يجعل الحواف دائرية */
+    padding: 10px 20px; /* حجم الأزرار */
+    font-size: 16px; /* حجم الخط */
+    font-weight: bold; /* الخط عريض */
+    cursor: pointer; /* شكل المؤشر عند التمرير */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل جميل */
+    transition: all 0.3s ease; /* تأثير سلس */
+}  
+.actions .main-button:hover {
+    background-color: #e63e00; /* لون مختلف عند التمرير */
+    transform: scale(1.1); /* يكبر الزر قليلاً */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* ظل أعمق */
+}
+.toolbar form {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.toolbar input {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #444;
+    color: #fff;
+    width: 30%;
+    }
+
+
+.toolbar .cancel-button
+{
+    background-color: #ff4500; /* اللون الأساسي */
+    color: white;
+    border: none;
+    border-radius: 25px; /* يجعل الحواف دائرية */
+    padding: 10px 20px; /* حجم الأزرار */
+    font-size: 16px; /* حجم الخط */
+    font-weight: bold; /* الخط عريض */
+    cursor: pointer; /* شكل المؤشر عند التمرير */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل جميل */
+    transition: all 0.3s ease; /* تأثير سلس */
+}
+.toolbar .cancel-button:hover 
+{
+    background-color: #c43400;
+}
+/* الجدول */
+.list {
+    height: 475px; /* تحديد الحد الأقصى للارتفاع */
+    overflow-y: auto; /* إظهار شريط التمرير العمودي عند الحاجة */
+    border: 1px solid #ff4500; /* حدود الحاوية */
+    border-radius: 5px; /* زوايا مدورة */
+}
+
+/* الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ff4500; /* حدود الخلايا */
+    padding: 10px; /* مسافة داخل الخلايا */
+    text-align: center; /* محاذاة النص إلى اليسار */
+}
+
+/* #orders-table-body:hover {
+    background-color: #3e3e3e; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+} */
+
+th {
+    background-color: #ff4500; /* لون خلفية رأس الجدول */
+    position: sticky; /* جعل الرأس ثابتًا */
+    top: 0; /* تحديد موضع الرأس عند التمرير */
+    z-index: 10; /* التأكد من أن الرأس يظهر فوق المحتوى */
+}
+
+tbody tr:hover {
+    background-color: #2e2e2e;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+tbody tr {
+    transition: background-color 0.2s ease-in-out;
+}
+.table-area {
+    flex: 2;
+    background: #2a2929;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-height: 550px;
+}
+.category-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* مسافة بين الأزرار */
+    margin: 5px 0;
+}
+
+.category-buttons button {
+    background-color: #ff4500; /* اللون الأساسي */
+    color: white;
+    border: none;
+    border-radius: 25px; /* يجعل الحواف دائرية */
+    padding: 10px 20px; /* حجم الأزرار */
+    font-size: 16px; /* حجم الخط */
+    font-weight: bold; /* الخط عريض */
+    cursor: pointer; /* شكل المؤشر عند التمرير */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل جميل */
+    transition: all 0.3s ease; /* تأثير سلس */
+}
+
+.category-buttons button:hover {
+    background-color: #e63e00; /* لون مختلف عند التمرير */
+    transform: scale(1.1); /* يكبر الزر قليلاً */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* ظل أعمق */
+}
+
+.category-buttons button:active {
+    transform: scale(1); /* عند الضغط يعود لحجمه الطبيعي */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* ظل أقل */
+}
+
+.order-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-details, .item-comments, .item-total {
+    margin-bottom: 8px;
+}
+
+.comment-item {
+    font-size: 14px;
+    color: #666;
+    padding-left: 15px;
+}
+
+.item-total {
+    font-weight: bold;
+    color: #28a745;
+}

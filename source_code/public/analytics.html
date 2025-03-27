@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليلات المبيعات</title>
+    <link rel="stylesheet" href="./css/analytics.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Analytics Dashboard</h1>
+        </div>
+
+        <!-- 🔹 الكروت الأساسية -->
+        <div class="analytics-row">
+            <div class="analytics-card" id="totalOrdersCard" data-chart="ordersChart">
+                <span class="analytics-title">Total Orders</span>
+                <span class="analytics-value" id="totalOrders">0</span>
+            </div>
+            <div class="analytics-card" id="totalRevenueCard" data-chart="revenueChart">
+                <span class="analytics-title"> Total Revenue</span>
+                <span class="analytics-value" id="totalRevenue">0 L.E</span>
+            </div>
+            <div class="analytics-card" id="topProductsCard" data-chart="topProductsChart">
+                <span class="analytics-title">Best Seller</span>
+                <ul id="topProducts"></ul>
+            </div>
+            <div class="analytics-card" id="leastProductsCard" data-chart="leastProductsChart">
+                <span class="analytics-title"> Least Products</span>
+                <ul id="leastProducts"></ul>
+            </div>
+            <div class="analytics-card" id="topCustomersCard" data-chart="topCustomersChart">
+                <span class="analytics-title">Best Customers</span>
+                <ul id="topCustomers"></ul>
+            </div>
+            <div class="analytics-card" data-chart="lowStockChart">
+                <span class="analytics-title"> Inventory</span>
+                <ul id="lowStockCount"></ul>
+            </div>
+        </div>
+        
+        <!-- 🔹 رسالة الخطأ في حال فشل تحميل البيانات -->
+        <div id="error-message" style="color: red; text-align: center;"></div>
+
+        <!-- 🔹 نافذة منبثقة للرسوم البيانية -->
+        <div class="overlay hidden" id="chartOverlay">
+            <div class="chart-container">
+                <canvas id="chartCanvas"></canvas>
+                <button class="close-btn" id="closeChart" hidden></button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="./js/analytics.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #ff4500, #000);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+    .amiri-regular {
+        font-family: "Amiri", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    .amiri-bold {
+        font-family: "Amiri", serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+    
+    .amiri-regular-italic {
+        font-family: "Amiri", serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+    
+    .amiri-bold-italic {
+        font-family: "Amiri", serif;
+        font-weight: 700;
+        font-style: italic;
+    }
+    
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    height: 680px;
+    background: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+/* شريط الأدوات */
+.toolbar {
+    background: #333;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 130px;
+}  
+.container main{
+    background: #333;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 470px;
+}
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* مسافة بين الأزرار */
+    margin: 5px 0;
+}  
+.actions .main-button {
+    background-color: #ff4500; /* اللون الأساسي */
+    color: white;
+    border: none;
+    border-radius: 25px; /* يجعل الحواف دائرية */
+    padding: 10px 20px; /* حجم الأزرار */
+    font-size: 16px; /* حجم الخط */
+    font-weight: bold; /* الخط عريض */
+    cursor: pointer; /* شكل المؤشر عند التمرير */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل جميل */
+    transition: all 0.3s ease; /* تأثير سلس */
+}  
+.actions .main-button:hover {
+    background-color: #e63e00; /* لون مختلف عند التمرير */
+    transform: scale(1.1); /* يكبر الزر قليلاً */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* ظل أعمق */
+}
+.toolbar form {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    }
+
+.toolbar input {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #444;
+    color: #fff;
+    width: 30%;
+    }
+
+.toolbar .main-button {
+    background-color: #ff4500; /* اللون الأساسي */
+    color: white;
+    border: none;
+    border-radius: 25px; /* يجعل الحواف دائرية */
+    padding: 10px 20px; /* حجم الأزرار */
+    font-size: 16px; /* حجم الخط */
+    font-weight: bold; /* الخط عريض */
+    cursor: pointer; /* شكل المؤشر عند التمرير */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل جميل */
+    transition: all 0.3s ease; /* تأثير سلس */
+}
+.toolbar .main-button:hover {
+    background-color: #c43400;
+}
+
+.table-area {
+    flex: 2;
+    background: #2a2929;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-height: 550px;
+}
+.category-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* مسافة بين الأزرار */
+    margin: 5px 0;
+}
+
+.category-buttons button {
+    background-color: #ff4500; /* اللون الأساسي */
+    color: white;
+    border: none;
+    border-radius: 25px; /* يجعل الحواف دائرية */
+    padding: 10px 20px; /* حجم الأزرار */
+    font-size: 16px; /* حجم الخط */
+    font-weight: bold; /* الخط عريض */
+    cursor: pointer; /* شكل المؤشر عند التمرير */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل جميل */
+    transition: all 0.3s ease; /* تأثير سلس */
+}
+
+.category-buttons button:hover {
+    background-color: #e63e00; /* لون مختلف عند التمرير */
+    transform: scale(1.1); /* يكبر الزر قليلاً */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* ظل أعمق */
+}
+
+.category-buttons button:active {
+    transform: scale(1); /* عند الضغط يعود لحجمه الطبيعي */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* ظل أقل */
+}
+/* تصميم شريط البحث */
+.search-bar {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.search-bar#search-input {
+    width: 50%; /* عرض شريط البحث */
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #444;
+    color: #fff;
+}
+#search-input{
+    background-color: #444; /* اللون الأساسي */
+    color: white;
+    border: none;
+    border-radius: 25px; /* يجعل الحواف دائرية */
+    padding: 10px 20px; /* حجم الأزرار */
+    font-size: 16px; /* حجم الخط */
+    font-weight: bold; /* الخط عريض */
+    cursor: pointer; /* شكل المؤشر عند التمرير */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل جميل */
+    transition: all 0.3s ease; /* تأثير سلس */
+}
+#filter-option{
+    background-color: #ff4500; /* اللون الأساسي */
+    color: white;
+    border: none;
+    border-radius: 25px; /* يجعل الحواف دائرية */
+    padding: 10px 20px; /* حجم الأزرار */
+    font-size: 16px; /* حجم الخط */
+    font-weight: bold; /* الخط عريض */
+    cursor: pointer; /* شكل المؤشر عند التمرير */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل جميل */
+    transition: all 0.3s ease; /* تأثير سلس */
+}
+/* ستايل صندوق الاقتراحات */
+.suggestions {
+    position: absolute;
+    background: #333;
+    border: 1px solid #ff4500;
+    width: calc(50% - 20px); /* عرض الاقتراحات أقل من شريط البحث */
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    z-index: 10;
+    left: 50%; /* مركز الاقتراحات */
+    transform: translateX(-50%); /* لتحريك الاقتراحات إلى اليسار بمقدار نصف عرضها */
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.suggestion-item:hover {
+    background: #ff4500;
+}
+
+/* الجدول */
+.inventory {
+    height: 475px; /* تحديد الحد الأقصى للارتفاع */
+    overflow-y: auto; /* إظهار شريط التمرير العمودي عند الحاجة */
+    border: 1px solid #ff4500; /* حدود الحاوية */
+    border-radius: 5px; /* زوايا مدورة */
+}
+
+table {
+    width: 100%; /* عرض الجدول بالكامل */
+    border-collapse: collapse; /* دمج الحدود */
+}
+
+th, td {
+    border: 1px solid #ff4500; /* حدود الخلايا */
+    padding: 10px; /* مسافة داخل الخلايا */
+    text-align: center; /* محاذاة النص إلى اليسار */
+}
+
+#product-table:hover {
+    background-color: #3e3e3e; /* لون مختلف عند التمرير */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* ظل أعمق */
+}
+
+th {
+    background-color: #ff4500; /* لون خلفية رأس الجدول */
+    position: sticky; /* جعل الرأس ثابتًا */
+    top: 0; /* تحديد موضع الرأس عند التمرير */
+    z-index: 10; /* التأكد من أن الرأس يظهر فوق المحتوى */
+}
+
+/* تحديد عرض الأعمدة */
+td:nth-child(1), th:nth-child(1) { /* عمود ID */
+    width: 50px; /* عرض صغير */
+}
+
+td:nth-child(2), th:nth-child(2) { /* عمود الاسم */
+    width: 200px; /* عرض أكبر */
+}
+
+td:nth-child(3), th:nth-child(3) { /* عمود الكمية */
+    width: 100px; /* عرض متوسط */
+}
+
+td:nth-child(4), th:nth-child(4) { /* عمود الكمية المباعة */
+    width: 100px; /* عرض متوسط */
+}
+
+td:nth-child(5), th:nth-child(5) { /* عمود التكلفة */
+    width: 100px; /* عرض متوسط */
+}
+
+td:nth-child(6), th:nth-child(6) { /* عمود السعر */
+    width: 100px; /* عرض متوسط */
+}
+
+td:nth-child(7), th:nth-child(7) { /* عمود تاريخ انتهاء الصلاحية */
+    width: 120px; /* عرض متوسط */
+}
+
+td:nth-child(8), th:nth-child(8) { /* عمود تاريخ الإدخال */
+    width: 120px; /* عرض متوسط */
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* مسافة بين الأزرار */
+}
+.footer button{
+    background-color: #ff4500; /* اللون الأساسي */
+    color: white;
+    border: none;
+    border-radius: 25px; /* يجعل الحواف دائرية */
+    padding: 10px 20px; /* حجم الأزرار */
+    font-size: 16px; /* حجم الخط */
+    font-weight: bold; /* الخط عريض */
+    cursor: pointer; /* شكل المؤشر عند التمرير */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل جميل */
+    transition: all 0.3s ease; /* تأثير سلس */
+}

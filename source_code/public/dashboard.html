@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.5/i18nextHttpBackend.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/dash.css">
+    <title data-i18n="dashboardTitle">Dashboard</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header">
+            <h1 id="dashboard-title" data-i18n="dashboardTitle">Welcome to BAZEZZ</h1>
+        </header>
+
+        <section class="orders-section">
+            <div class="orders-links">
+                <a href="./cashier.html" class="order-link" id="cashier-link" data-i18n="cashier">Cashier</a>
+                <a href="./manage_orders.html" class="order-link" id="orders-link" data-i18n="orders">Orders</a>
+                <a href="./products.html" class="order-link" id="products-link" data-i18n="products">Products</a>
+                <a href="./daily.html" class="order-link" id="daily-sales-link" data-i18n="dailySales">Daily Sales</a>
+                <a href="./monthly.html" class="order-link" id="monthly-sales-link" data-i18n="monthlySales">Monthly Sales</a>
+                <a href="./inventory.html" class="order-link" id="inventory-link" data-i18n="inventory">Inventory</a>
+                <a href="./discount.html" class="order-link" id="discount-link" data-i18n="discounts">Discounts</a>
+                <a href="./analytics.html" class="order-link" id="analytics-link" data-i18n="analytics">Analytics</a>
+            </div>
+        </section>
+
+        <main class="main-content">
+            <!-- ✅ إدخال كود الخصومات -->
+            <section class="card">
+                <h2 id="manage-customers-title" data-i18n="manageCustomers">Manage Customers</h2>
+                <button id="openCustomersPage" data-i18n="customers">Customers</button>
+            </section>
+            
+            <section class="card">
+                <h2 id="total-orders-title" data-i18n="totalOrders">Total Orders</h2>
+                <p id="orderCount" data-i18n="orderCount">Loading</p>
+            </section>
+            
+            <section class="card">
+                <h2 id="system-control-title" data-i18n="systemControl">System Control</h2>
+                <button id="restartServerBtn" data-i18n="restartServer">Restart Server</button>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <button id="logoutBtn" data-i18n="logout">Logout</button>
+            <button id="settingsBtn" data-i18n="settings">Settings</button>
+        </footer>
+    </div>
+
+    <!-- ✅ مكتبة i18next -->
+    <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
+    <script src="./js/i18n.js"></script>
+    <script src="./js/dashboard.js" defer></script>
+    <script src="./js/auth.js"></script>
+</body>
+</html>

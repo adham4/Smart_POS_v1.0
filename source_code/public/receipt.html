@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإيصال</title>
+    <link rel="stylesheet" href="./css/receipt.css">
+</head>
+<body>
+
+    <div id="receipt-container">
+        <h2>BAZEZZ</h2>
+        <div class="customerBox">
+            <div class="dataBox">
+                <p>Order : <span id="order-id"></span></p>
+                <p>Date: <span id="order-date"></span></p>
+            </div>
+            <div class="info">
+                <p>Name : <span id="customer-name"></span></p>
+                <p>Phone : <span id="customer-phone"></span></p>
+                <p>Address : <span id="customer-address"></span></p>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>الصنف</th>
+                    <th>الكمية</th>
+                    <th>السعر</th>
+                </tr>
+            </thead>
+            <tbody id="order-details"></tbody>
+        </table>
+        <div class="totalBox">
+            <p>Total : <span id="order-total"></span></p>
+            <p>Delivery : <span id="delivery-price"></span></p>
+            <p>Sub-Total : <span id="subtotal"></span></p>
+            <p>Discount : <span id="discount"></span></p>
+        </div>
+        <div class="footer">
+            <span><strong>Phone :</strong> 01005078132 - 01211228565</span>
+            <div>
+                <span><strong>complements :</strong> 01005078132 </span>
+            </div>
+        </div>
+        <button onclick="window.print()">🖨️ طباعة الإيصال</button>
+    </div>
+
+    <script src="./js/receipt.js"></script>
+
+</body>
+</html>

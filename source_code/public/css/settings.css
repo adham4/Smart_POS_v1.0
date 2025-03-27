@@ -1,0 +1,78 @@
+/* تثبيت التنسيق العام */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #ff4500, #000);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    height: 680px;
+    background: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h2 {
+    color: #ff4500;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* تنسيق كل سيكشن */
+.settings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* تنسيق الـ label */
+label {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* تنسيق اختيار اللغة */
+select {
+    padding: 0.6rem;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #ff4500;
+}
+
+/* تنسيق زر الحفظ */
+button {
+    padding: 0.8rem;
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #e03c00;
+}

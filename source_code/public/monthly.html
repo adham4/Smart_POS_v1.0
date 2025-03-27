@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Closing Report</title>
+    <link rel="stylesheet" href="./css/monthly.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Monthly Sales</h1>
+        </header>
+
+        <!-- 🟢 ملخص الطلبات -->
+        <div class="first-categories">
+            <div class="orders-summary">
+                <div><span class="orders">Orders</span></div>
+                <div class="orders-data">
+                    <div class="order-item"><span>Orders :</span> <span id="totalOrders">0</span></div>
+                    <div class="order-item"><span>Sandwiches :</span> <span id="totalSandwiches">0</span></div>
+                </div>
+            </div>
+
+            <!-- 🟠 الإيرادات -->
+            <div class="orders-revenue">
+                <div><span class="revenue">Revenue</span></div>
+                <div class="revenue-data">
+                    <div class="order-item"><span>Total Revenue :</span> <span id="totalRevenue">0</span> <span>EGP</span></div>
+                </div>
+            </div>
+
+            <!-- 🔴 التكاليف -->
+            <div class="orders-cost">
+                <div><span class="cost">Cost</span></div>
+                <div class="cost-data">
+                    <div class="order-item"><span>Total Cost :</span> <span id="totalCost">0</span> <span>EGP</span></div>
+                </div>
+            </div>
+
+            <!-- 🟣 الأرباح -->
+            <div class="orders-earnings">
+                <div><span class="earnings">Earnings</span></div>
+                <div class="earnings-data">
+                    <div class="order-item"><span>Total Earnings :</span> <span id="totalEarnings">0</span> <span>EGP</span></div>
+                </div>
+            </div>
+
+            <!-- 🟢 الخصومات -->
+            <div class="orders-discount">
+                <div><span class="discount">Discounts</span></div>
+                <div class="discount-data">
+                    <div class="order-item">
+                        <span>Total Discounts :</span>
+                        <span id="totalDiscount">0</span> <span>EGP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🟠 المدفوعات الإلكترونية -->
+            <div class="orders-online-payments">
+                <div><span class="online-payments">Online Payments</span></div>
+                <div class="online-payments-data">
+                    <div class="order-item">
+                        <span>Online Payments :</span>
+                        <span id="totalOnlinePayments">0</span> <span>EGP</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ✅ الأزرار السفلية -->
+        <div class="footer">
+            <button class="print-button" onclick="openReport()">Monthly Report</button>
+            <button id="closeMonthBtn">End Month</button>
+        </div>
+    </div>
+
+    <script src="./js/monthly.js"></script>
+    <script src="./js/auth.js"></script>
+</body>
+</html>

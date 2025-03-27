@@ -1,0 +1,23 @@
+{
+    "development": {
+        "username": "adham",
+        "password": "Adham123!",
+        "database": "pos_system",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": "adham",
+        "password": "Adham123!",
+        "database": "pos_system",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "adham",
+        "password": "Adham123!",
+        "database": "pos_system",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    }
+}

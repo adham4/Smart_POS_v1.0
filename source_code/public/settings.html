@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.5/i18nextHttpBackend.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="settings">Settings</title>
+    <link rel="stylesheet" href="./css/settings.css" />
+</head>
+<body>
+
+    <div class="container">
+        <h2 data-i18n="settings">Settings</h2>
+    
+        <!-- اختيار اللغة -->
+        <div class="settings-section">
+            <label for="language-select" data-i18n="language">Select Language:</label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+    
+        <!-- زر حفظ الإعدادات -->
+        <div class="settings-section">
+            <button id="save-settings" data-i18n="submit">Save Settings</button>
+        </div>
+    </div>
+
+<!-- مكتبة i18next -->
+<script src="https://unpkg.com/i18next@21.6.13/dist/umd/i18next.min.js"></script>
+<script src="./js/i18n.js"></script>
+<script type="module" src="./js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المنتجات</title>
+    <link rel="stylesheet" href="./css/products.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- شريط الأدوات مع الفورم الذي يملىء المساحة بالكامل -->
+        <div class="toolbar">
+            <form id="add-product-form">
+                <!-- شريط البحث والقائمة المنسدلة -->
+                <div class="search-bar-container">
+                    <input 
+                        type="text" 
+                        id="search-bar" 
+                        class="search-bar" 
+                        placeholder="🔍 Search..." 
+                        oninput="searchProducts()" 
+                    />
+                    <select id="filter-options" class="filter-dropdown" onchange="applyFilter()">
+                        <option value="">Filter by...</option>
+                        <option value="most-sold">best seller </option>
+                        <option value="highest-price">most expensive</option>
+                        <option value="lowest-price">The cheapest</option>
+                        <option value="category">By Type</option>
+                    </select>
+                </div>
+        
+                <input type="hidden" id="product-id" />
+                <input type="text" id="product-name" placeholder="Name" required />
+                <input type="text" id="product-category" placeholder="Category" required />
+                <input type="number" id="product-price" placeholder="Price" required />
+        
+                <button type="submit" class="main-button">Add</button>
+                <button type="button" id="edit-btn" class="main-button">Edit</button>
+                <button type="button" id="delete-btn" class="main-button">Delete</button>
+            </form>
+        </div>
+
+        <!-- جدول المنتجات وأزرار التصدير والطباعة -->
+        <main>
+            <div class="products">
+                <table>
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">ID</th>
+                            <th onclick="sortTable(1)">Name</th>
+                            <th onclick="sortTable(2)">Category</th>
+                            <th onclick="sortTable(3)">Price</th>
+                            <th onclick="sortTable(4)">Sold</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="product-table">
+                        <!-- Customer data will be populated here using JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- أزرار التصدير والطباعة -->
+            <div class="footer">
+                <button onclick="exportProductsToPDF()" class="main-button"> Export PDF</button>
+                <button onclick="exportProductsToExcel()" class="main-button">Export Excel</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="./js/product.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable"></script>
+</body>
+</html>

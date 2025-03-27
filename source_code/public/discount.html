@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Discount Codes</title>
+    <link rel="stylesheet" href="./css/discount.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Manage Discounts</h1>
+        </header>
+
+        <!-- ✅ نموذج التحكم في أكواد الخصم -->
+        <div class="toolbar">
+            <form id="discount-form">
+                <input type="hidden" id="discount-id" />
+                <input type="text" id="code" placeholder="Code" required />
+            
+                <select id="discount_type" required>
+                    <option value="">Type</option>
+                    <option value="percentage">percentage (%)</option>
+                    <option value="fixed">Fixed</option>
+                </select>
+            
+                <input type="number" id="discount_value" placeholder="Value" required />
+                <input type="date" id="start_date" placeholder="Start Date" required />
+                <input type="date" id="end_date" placeholder="End day" required />
+            
+                <!-- 🆕 Dropdown مخفي يظهر عند الضغط -->
+                <div class="autocomplete">
+                    <input type="text" id="applicable_products" placeholder="Select the Products" readonly />
+                    <div id="products-list" class="dropdown-list hidden"></div>
+                </div>
+            
+                <select id="is_active" required>
+                    <option value="true">Active</option>
+                    <option value="false">Not Active</option>
+                </select>
+            
+                <button type="submit" class="save-button">Save</button>
+                <button type="button" id="cancel-btn" class="cancel-button">Cancel</button>
+                <button id="delete-discount" class="delete-button">Delete</button> 
+            </form>
+        </div>
+
+        <!-- ✅ جدول عرض أكواد الخصم -->
+        <div class="list">
+            <table>
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Code</th>
+                        <th onclick="sortTable(1)">Type</th>
+                        <th onclick="sortTable(2)">Value</th>
+                        <th onclick="sortTable(3)">Start Date</th>
+                        <th onclick="sortTable(4)">End Date</th>
+                        <th onclick="sortTable(5)">Products</th>
+                        <th onclick="sortTable(6)">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="discounts-table-body">
+                    <!-- Customer data will be populated here using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./js/discount.js"></script>
+    <!-- <script src="./js/auth.js"></script> -->
+</body>
+</html>

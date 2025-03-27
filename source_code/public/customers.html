@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Customers</title>
+    <link rel="stylesheet" href="./css/customers.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>Manage Customers</h1>
+        </header>
+        
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <form id="add-customer-form">
+                <input type="text" id="customer-name" placeholder="Customer Name" required />
+                <input type="tel" id="customer-phone" placeholder="Phone Number" required />
+                <input type="text" id="customer-address" placeholder="Address" required />
+                <div class="actions">
+                    <button type="button" id="add-btn" class="main-button">Add</button>
+                    <button type="button" id="edit-btn" class="main-button">Edit</button>
+                    <button type="button" id="delete-btn" class="cancel-button">Delete</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Customer List -->
+        <div class="list">
+            <table>
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">ID</th>
+                        <th onclick="sortTable(1)">Name</th>
+                        <th onclick="sortTable(2)">Phone</th>
+                        <th onclick="sortTable(3)">Address</th>
+                        <th onclick="sortTable(4)">Total Orders</th>
+                        <th onclick="sortTable(5)">Total Spent</th>
+                    </tr>
+                </thead>
+                <tbody id="customers-table-body">
+                    <!-- Customer data will be populated here using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="./js/customers.js"></script>
+</body>
+</html>

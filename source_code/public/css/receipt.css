@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    direction: ltr;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+#receipt-container {
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+    /* margin-bottom: 10px; */
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.customerBox {
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+.customerBox p {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.info{
+    padding: 10px;
+    border-radius: 5px;
+    /* margin-bottom: 10px; */
+    background: #f9f9f9;
+}
+
+.dataBox {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    /* margin-bottom: 10px; */
+    background: #f9f9f9;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dataBox p {
+    margin: 5px 0;
+    width: 48%;
+}
+.order-details {
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+
+
+h3 {
+    text-align: center;
+    margin: 15px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+th, td {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.totalBox {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius : 5px;
+    background: #f9f9f9;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.totalBox p {
+    margin: 5px 0;
+    width: 48%;
+}
+
+.footer {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    border-top: 1px solid black;
+    padding-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: darkgreen;
+}

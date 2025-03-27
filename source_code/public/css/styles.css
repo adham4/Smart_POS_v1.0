@@ -1,0 +1,93 @@
+/* 🔥 Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🔥 Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #ff4500, #000);
+}
+
+/* 🔥 Login Container */
+.login-container {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 380px;
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+}
+
+/* 🔥 Header */
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h1 {
+    font-size: 2.2rem;
+    color: #000;
+    font-weight: 700;
+}
+
+/* 🔥 Input Group */
+.input-group {
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    padding-left: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #ff4500;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.4);
+}
+
+/* 🔥 Login Button */
+#login-form button {
+    width: 100%;
+    background: #ff4500;
+    color: #fff;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+#login-form button:hover {
+    background: #d93900;
+    transform: scale(1.05);
+}
+
+/* 🔥 Responsive */
+@media (max-width: 400px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+}

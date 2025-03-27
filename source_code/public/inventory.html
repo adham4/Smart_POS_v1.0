@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المخزن</title>
+    <link rel="stylesheet" href="./css/inventory.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        </style>
+</head>
+<body>
+    <div class="container">
+        <!-- شريط الأدوات -->
+        <div class="toolbar">
+            <!-- شريط البحث -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="ابحث عن منتج..." onkeyup="applyFilter()">
+                <select id="filter-option" onchange="applyFilter()">
+                    <option value="all">كل المنتجات</option>
+                    <option value="low-stock">الكمية القليلة</option>
+                    <option value="new-arrivals">المضافة حديثًا</option>
+                    <option value="near-expiry">قرب انتهاء الصلاحية</option>
+                </select>
+            </div>            
+            <form id="add-product-form">
+                <input type="text" id="product-name" placeholder="اسم المنتج" required />
+                <input type="number" id="product-quantity" placeholder="الكمية" required />
+                <input type="number" id="product-min" placeholder="الحد الأدنى للمخزون" required />            
+                <input type="number" id="product-total" placeholder="الإجمالي" required />
+                <input type="number" id="product-cost" placeholder="التكلفة" required />
+                <input type="date" id="product-expiry" placeholder="تاريخ انتهاء الصلاحية" required />
+
+                <button type="submit" class="main-button">إضافة</button>
+                <button type="button" id="edit-btn" class="main-button">تعديل</button>
+                <button type="button" id="delete-btn" class="main-button">حذف</button>
+            </form>
+        </div>
+
+        <!-- جدول المنتجات وأزرار التصدير والطباعة داخل الماين -->
+        <main>
+            <div class="inventory">
+                <table>
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Id</th>
+                            <th onclick="sortTable(1)">NAME</th>
+                            <th onclick="sortTable(2)">QUANTITY (KG)</th>
+                            <th onclick="sortTable(3)">MIN</th>
+                            <th onclick="sortTable(4)">TOTAL</th>
+                            <th onclick="sortTable(5)">COST</th>
+                            <th onclick="sortTable(6)">ADDED</th>
+                            <th onclick="sortTable(7)">EXPIRY</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-table">
+                        <!-- Customer data will be populated here using JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- أزرار التصدير والطباعة داخل الـ main -->
+            <div class="footer">
+                <button onclick="exportToPDF()" class="main-button">تصدير إلى PDF</button>
+                <button onclick="exportToExcel()" class="main-button">تصدير إلى Excel</button>
+            </div>
+        </main>
+
+        <!-- تنبيهات المخزون (بدون أخذ مساحة إضافية) -->
+        <div id="alerts" class="alerts" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 100;">
+            <!-- التنبيهات ستظهر هنا ديناميكيًا -->
+        </div>
+
+    </div>
+
+    <script src="./js/inventory.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقرير الشهري</title>
+    <style>
+        body {
+            font-family: monospace;
+            direction: rtl;
+            text-align: center;
+            padding: 10px;
+        }
+        .report-container {
+            width: 300px;
+            margin: auto;
+            text-align: right;
+            font-size: 14px;
+            border: 1px dashed black;
+            padding: 10px;
+            background: white;
+        }
+        h1 {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px 0;
+            border-bottom: 1px dashed black;
+            font-size: 14px;
+        }
+        .total {
+            font-weight: bold;
+        }
+        .center {
+            text-align: center;
+        }
+        .print-btn {
+            margin-top: 10px;
+            padding: 5px 15px;
+            font-size: 14px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .print-btn:hover {
+            background: gray;
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .report-container, .report-container * {
+                visibility: visible;
+            }
+            .report-container {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                border: none;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="report-container" id="receipt">
+        <h1>📅 التقرير الشهري</h1>
+        <p class="center">الشهر: <span id="report-date"></span></p>
+
+        <table>
+            <tr>
+                <td>📌 عدد الطلبات</td>
+                <td id="totalOrders" class="total">--</td>
+            </tr>
+            <tr>
+                <td>🥪 عدد السندويتشات</td>
+                <td id="totalSandwiches" class="total">--</td>
+            </tr>
+            <tr>
+                <td>💰 الإيرادات</td>
+                <td id="totalRevenue" class="total">--</td>
+            </tr>
+            <tr>
+                <td>📉 التكلفة</td>
+                <td id="totalCost" class="total">--</td>
+            </tr>
+            <tr>
+                <td>💵 الأرباح</td>
+                <td id="totalEarnings" class="total">--</td>
+            </tr>
+        </table>
+
+        <p class="center">شكراً لاستخدام نظام BAZEZZ</p>
+
+        <button class="print-btn" onclick="printReceipt()">🖨️ طباعة</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            try {
+                const response = await fetch('/api/monthly-summary');
+                const data = await response.json();
+
+                document.getElementById("report-date").innerText = new Date().toLocaleDateString('ar-EG', { year: 'numeric', month: 'long' });
+                document.getElementById("totalOrders").innerText = data.totalOrders;
+                document.getElementById("totalSandwiches").innerText = data.totalSandwiches;
+                document.getElementById("totalRevenue").innerText = data.totalRevenue + " جنيه";
+                document.getElementById("totalCost").innerText = data.totalCost + " جنيه";
+                document.getElementById("totalEarnings").innerText = data.totalEarnings + " جنيه";
+            } catch (error) {
+                console.error("❌ خطأ في تحميل التقرير:", error);
+            }
+        });
+
+        function printReceipt() {
+            window.print();
+        }
+    </script>
+
+</body>
+</html>

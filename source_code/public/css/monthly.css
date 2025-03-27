@@ -1,0 +1,167 @@
+/* 🔹 الخطوط العامة */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #ff4500, #000);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* منع التمرير */
+}
+
+/* 🔹 الحاوية الرئيسية */
+.container {
+    width: 90%;
+    max-width: 1300px;
+    height: 95vh; /* جعل الحاوية تأخذ أغلب الشاشة */
+    background: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto; /* تمكين التمرير داخل الحاوية */
+}
+
+/* 🔹 العنوان الرئيسي */
+.header {
+    width: 100%;
+    text-align: center;
+    background: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.header h1 {
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 🔹 ترتيب الأقسام */
+.first-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* 🔹 المربعات الأساسية */
+.orders-summary, 
+.orders-revenue, 
+.orders-cost, 
+.orders-earnings, 
+.orders-discount, 
+.orders-online-payments {
+    background: #333;
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%;
+    box-sizing: border-box;
+    transition: background 0.3s;
+}
+
+/* 🔹 العناوين داخل المربعات */
+.orders, 
+.revenue, 
+.cost, 
+.earnings, 
+.discount, 
+.online-payments {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #ff4500;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 🔹 ترتيب البيانات داخل المربعات */
+.orders-data, 
+.revenue-data, 
+.cost-data, 
+.earnings-data, 
+.discount-data, 
+.online-payments-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    background: #2a2929;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+/* 🔹 ترتيب البيانات داخل "ملخص الطلبات" */
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #2a2929;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 🔹 تحسين شكل الأرقام */
+#totalOrders, 
+#totalSandwiches, 
+#totalRevenue, 
+#totalCost, 
+#totalEarnings, 
+#totalDiscount, 
+#totalOnlinePayments {
+    color: #ffdd57;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 🔹 الحاوية السفلية للأزرار */
+.footer {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: auto; /* دفع الفوتر لأسفل */
+}
+
+/* ✅ زر الطباعة وزر غلق الشهر */
+.print-button, #closeMonthBtn {
+    width: 100%;
+    padding: 0.75rem;
+    background: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.print-button:hover, #closeMonthBtn:hover {
+    background: #c43400;
+}

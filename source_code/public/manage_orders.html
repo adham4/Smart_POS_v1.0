@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Orders</title>
+    <link rel="stylesheet" href="./css/manage_orders.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>Manage Orders</h1>
+        </header>
+        <!-- عناصر التحكم -->
+        <div class="toolbar">
+            <form id="add-product-form">
+                <input type="text" id="order-id" placeholder="id "  />
+                <input type="number" id="order-quantity" placeholder="الدليفري"  />
+                <input type="number" id="order-total" placeholder="الإجمالي"  />
+                <button type="button" id="cancel-btn" class="cancel-button">cancel</button>
+            </form>
+        </div>
+        
+        <!-- جدول الطلبات -->
+        <div class="list">
+            <table>
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Id</th>
+                        <th onclick="sortTable(1)">Name</th>
+                        <th onclick="sortTable(2)">Phone</th>
+                        <th onclick="sortTable(3)">Address</th>
+                        <th onclick="sortTable(4)">Total</th>
+                        <th onclick="sortTable(5)">Order Details</th>
+                        <th onclick="sortTable(6)">Method</th>
+                        <th onclick="sortTable(7)">Cancelled</th>
+                    </tr>
+                </thead>
+                <tbody id="orders-table-body">
+                    <!-- Customer data will be populated here using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="./js/manage_orders.js"></script>
+    <script src="./js/auth.js"></script>
+
+</body>
+</html>

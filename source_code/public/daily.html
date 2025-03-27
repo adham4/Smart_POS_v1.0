@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقفيل اليومي</title>
+    <link rel="stylesheet" href="./css/daily.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Daily Sales</h1>
+        </header>
+        <!-- 🟢 ملخص الطلبات -->
+        <div class="first-categories">
+            <div class="orders-summary">
+                <div>
+                    <span class="orders">Orders</span>
+                </div>
+                <div class="orders-data">
+                    <div class="order-item">
+                        <span>Orders :</span>
+                        <span id="totalOrders">0</span>
+                    </div>
+                    <div class="order-item">
+                        <span>Sandwiches :</span>
+                        <span id="totalSandwiches">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🟠 الإيرادات -->
+            <div class="orders-revenue">
+                <div><span class="revenue">Revenue</span></div>
+                <div class="revenue-data">
+                    <div class="order-item">
+                        <span>Total Revenue :</span>
+                        <span id="total-revenue">0</span> <span>EGP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🔴 التكاليف -->
+            <div class="orders-cost">
+                <div><span class="cost">Cost</span></div>
+                <div class="cost-data">
+                    <div class="order-item">
+                        <span>Total Cost :</span>
+                        <span id="total-cost">0</span> <span>EGP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🟣 الأرباح -->
+            <div class="orders-earnings">
+                <div><span class="earnings">Earnings</span></div>
+                <div class="earnings-data">
+                    <div class="order-item">
+                        <span>Total Earnings :</span>
+                        <span id="total-earnings">0</span> <span>EGP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🟢 الخصومات (بنفس شكل الأقسام السابقة) -->
+            <div class="orders-discount">
+                <div><span class="discount">Discounts</span></div>
+                <div class="discount-data">
+                    <div class="order-item">
+                        <span>Total Discounts :</span>
+                        <span id="total-discount">0</span> <span>EGP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🟠 المدفوعات الإلكترونية (بنفس شكل الأقسام السابقة) -->
+            <div class="orders-online-payments">
+                <div><span class="online-payments">Online Payments</span></div>
+                <div class="online-payments-data">
+                    <div class="order-item">
+                        <span>Total Online Payments :</span>
+                        <span id="total-online-payments">0</span> <span>EGP</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <!-- ✅ زر طباعة التقرير -->
+            <button class="print-button" onclick="openReport()">Print Report</button>
+            <!-- 🟢 زر غلق اليوم -->
+            <button id="close-day-btn" class="close-btn">End Day</button>
+        </div>
+    </div>
+
+    <script src="./js/daily.js"></script>
+    <script src="./js/auth.js"></script>
+
+</body>
+</html>

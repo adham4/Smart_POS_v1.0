@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashier</title>
+    <link rel="stylesheet" href="./css/cashier.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- قسم بيانات العميل وطريقة الدفع -->
+        <div class="customer-section">
+            <div class="customer-info">
+                <label for="customer-name">Name:</label>
+                <input type="text" id="customer-name" placeholder="Customer Name">
+                
+                <label for="customer-address">Address:</label>
+                <input type="text" id="customer-address" placeholder="Customer Address">
+                
+                <label for="customerPhoneInput">Phone :</label>
+                <input type="text" id="customer-phone" placeholder="Customer Phone" autocomplete="off">
+                <div id="suggestions" class="dropdown-list"></div>
+
+                <label for="delivery-price">Delivery:</label>
+                <select id="delivery-price">
+                    <option value="0">Select Delivery</option>
+                </select>
+            </div>
+
+
+        </div>
+
+        <main>
+            <!-- قسم المنيو والسندويتشات -->
+            <div class="menu">
+                <div class="payment-method">
+                    <div class="payment-buttons">
+                        <button type="button" class="payment-btn" data-method="cash" onclick="setPaymentMethod('cash')">Cash</button>
+                        <button type="button" class="payment-btn" data-method="electronic" onclick="setPaymentMethod('electronic')">Electronic</button>
+                    </div>
+                    <input type="hidden" id="payment-method" value="cash">
+                </div>
+                <nav>
+                    <div class="menu-buttons">
+                        <button id="beef-btn" onclick="showMenu('beef')">Beef Burgers</button>
+                        <button id="chicken-btn" onclick="showMenu('chicken')">Chicken Burgers</button>
+                        <button id="french-btn" onclick="showMenu('french')">French Sandwiches</button>
+                        <button id="combo-btn" onclick="showMenu('combo')">Combos</button>
+                        <button id="addons-btn" onclick="showMenu('Add_ons')">Add ons</button>
+                    </div>
+                </nav>
+                <div id="menu-items" class="menu-items"></div>
+            </div>
+            
+            <!-- قسم تفاصيل الطلب -->
+            <div class="current-order">
+                <h3>Current Order</h3>
+                <div id="order-summary">
+                    <!-- الطلبات هتظهر هنا -->
+                </div>
+                <div class="order-bot">
+                    <div id="total-line" style="text-align: center;">TOTAL : <span id="order-total">0 </span> EGP</div>
+                    <button id="submit-order">Submit Order</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./js/cashier.js"></script>
+    <script src="./js/auth.js"></script>
+</body>
+</html>
