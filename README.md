@@ -49,3 +49,10 @@ An advanced POS (Point of Sale) system designed specifically for restaurants and
 1. **Clone the repository**  
 ```bash
 git clone https://github.com/adham4/Smart_POS_v1.0.git
+
+npm install
+node server
+
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all
+
